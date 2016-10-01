@@ -1,0 +1,23 @@
+angular.module('content',[])
+	.value('imageContent',{
+		images:
+			[
+				'./assets/IMG_1.jpg',
+				'./assets/IMG_2.jpg',
+				'./assets/IMG_3.jpg',
+				'./assets/IMG_4.jpg',
+				'./assets/IMG_5.jpg',
+				'./assets/IMG_6.jpg'
+			],
+		washington:
+			[
+				'./assets/washington/IMG_1.jpg',
+				'./assets/washington/IMG_2.jpg',
+				'./assets/washington/IMG_3.jpg',
+				'./assets/washington/IMG_4.jpg',
+				'./assets/washington/IMG_5.jpg',
+				'./assets/washington/IMG_6.jpg',
+				'./assets/washington/IMG_7.jpg',
+				'./assets/washington/IMG_8.jpg'
+			]
+	});
