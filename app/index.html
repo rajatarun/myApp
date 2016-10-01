@@ -9,35 +9,105 @@
   <title>My AngularJS App</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="../bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css" />
+  <link rel="stylesheet" href="../bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="../bower_components/angular-material-icons/angular-material-icons.css" />
   <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Pacifico|Source+Sans+Pro|Yanone+Kaffeesatz:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
-  <ul class="menu">
-    <li><a href="#!/view1">view1</a></li>
-    <li><a href="#!/view2">view2</a></li>
-  </ul>
 
+<div id="page2" ng-keydown="key($event)" ng-controller="placeController">
+    <div layout="column" flex layout-align="center center" slide-directive="./assets/IMG_1.jpg" ng-show="fromIndex">
+      <div layout="row">
+        
+        <h1 heading="welcome" flex></h1>
+      </div>
+      <div layout="row" class="icon">
+        <a ng-click="fromIndex()"  ng-keydown="key($event)"><span class="glyphicon glyphicon-chevron-down"></span></a>
+      </div>
+    </div>
+    <div id="page2">
+      <div  ng-show="currentStep === 0">
+      <div layout="row" flex layout-align="center center">
+        <div layout="row" class="icon" ng-click="transitLeft(2,0)" ng-keydown="key($event,2,0)" ng-show="currentStep !== 0">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        </div>
+        <h1 heading="Here We Go!" layout-align="center center" fullpage="true" class="bg-text"></h1>
+        <div layout="row" class="icon" ng-keydown="key($event,2,0)" ng-click="transitRight(2,0)">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        </div>
+        </div>
+        </div>
+    </div>
+    <div id="page2-1" ng-show="currentStep === 1">
+      <div layout="row" flex layout-align="center center" slide-directive="./assets/IMG_2.jpg">
+        <div layout="row" ng-keydown="key($event,2,1)" class="icon" ng-click="transitLeft(2,1)" ng-show="currentStep !== 0">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        </div>
+        <h1 heading="New York" layout-align="end center" fullpage="true" class="bg-text" flex></h1>
+        <div layout="row" ng-keydown="key($event,2,1)" class="icon" ng-click="transitRight(2,1)">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        </div>
+      </div>
+    </div>
+    <div id="page2-2" ng-show="currentStep === 2">
+      <div layout="row" flex layout-align="center center" slide-directive="./assets/IMG_3.jpg">
+        <div layout="row" ng-keydown="key($event,2,2)" class="icon" ng-click="transitLeft(2,2)" ng-show="currentStep !== 0">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        </div>
+        <h1 heading="Washington" fullpage="true" layout-align="center center" class="bg-text" flex></h1>
+        <div layout="row" ng-keydown="key($event,2,2)" class="icon" ng-click="transitRight(2,2)">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        </div>
+      </div>
+    </div>
+    <div id="page2-2" ng-show="currentStep === 3">
+      <div layout="row" flex layout-align="center center" slide-directive="./assets/IMG_4.jpg">
+        <div layout="row" ng-keydown="key($event,2,3)" class="icon" ng-click="transitLeft(2,3)" ng-show="currentStep !== 0">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        </div>
+        <h1 heading="TENNESSEE" fullpage="true" layout-align="center center" class="bg-text" flex></h1>
+        <div layout="row" ng-keydown="key($event,2,3)" class="icon" ng-click="transitRight(2,3)">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        </div>
+      </div>
+    </div>
+    <div id="page2-2">
+         
+    </div>
+</div>
+
+  <!-- <img slide-directive ng-src="{{image}}" width="100%" class="bg"/> -->
+  
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <div ng-view></div>
-
-  <div>Angular seed app: v<span app-version></span></div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="app.js"></script>
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/angular-route/angular-route.js"></script>
+  <script src="./app.js"></script>
   <script src="view1/view1.js"></script>
   <script src="view2/view2.js"></script>
-  <script src="components/version/version.js"></script>
-  <script src="components/version/version-directive.js"></script>
-  <script src="components/version/interpolate-filter.js"></script>
+  <script src="./components/version/version.js"></script>
+  <script src="./components/version/version-directive.js"></script>
+  <script src="./components/version/interpolate-filter.js"></script>
+  <script src="../bower_components/angular-animate/angular-animate.js"></script>
+<script src="../bower_components/angular-aria/angular-aria.js"></script>
+<script src="../bower_components/angular-messages/angular-messages.js"></script>
+<script src="../bower_components/angular-material/angular-material.js"></script>
+  <script type="text/javascript" src="./components/content/content.js"></script>
+  <script src="../bower_components/angular-material-icons/angular-material-icons.min.js"></script>
+  <script type="text/javascript" src="./directives/slide.js"></script>
 </body>
 </html>

@@ -1,25 +1,44 @@
 /* app css stylesheet */
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+*{
+	overflow-x:hidden;
 }
-
-.menu:before {
-  content: "[";
+.icon,a{
+	overflow-y: hidden;
 }
-
-.menu:after {
-  content: "]";
+span.glyphicon.glyphicon-chevron-down{
+	overflow-y: hidden;
+	font-size: 50px;
+	font-weight: 5px;
+	color: white;
 }
-
-.menu > li {
-  display: inline;
+span.glyphicon.glyphicon-chevron-right{
+	overflow-y: hidden;
+	font-size: 50px;
+	font-weight: 5px;
+	float: left;
 }
-
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+span.glyphicon.glyphicon-chevron-left{
+	overflow-y: hidden;
+	font-size: 50px;
+	font-weight: 5px;
+	float: left;
+}
+body{
+	margin:0;
+}
+img.bg{
+	z-index: -1;
+}
+h1{
+	font-kerning: normal;
+font-variant-ligatures: common-ligatures contextual;
+-moz-font-feature-settings: "kern", "liga", "clig", "calt";
+-ms-font-feature-settings: "kern", "liga", "clig", "alt";
+-webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+font-feature-settings: "kern", "liga", "clig", "calt";
+}
+.btn1{
+	font-size: 40px;
+	padding: 0px;
+	margin: 0px;
 }

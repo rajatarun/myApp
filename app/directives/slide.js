@@ -84,7 +84,7 @@ angular.module('slide',['content'])
 						e.html(welcome.slice(0,index)+'<span blink>|</span>');
 						index++;
 						e.css({
-						'height':(Number(height/4).toString())+'px',
+						'height':((height/4).toString())+'px',
 						'z-index':0,
 						'font-size':'140px',
 						'overflow-y':'hidden',
